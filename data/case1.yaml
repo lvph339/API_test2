@@ -1,0 +1,45 @@
+-
+  caseid: 1
+  casename: 今日查看权益消耗
+  get_key:
+    - priceId
+    - targetId
+  public_key:
+  private_key:
+  url: /wapi/zpblock/page/chatbag/price.json
+  method: get
+  qiwang:
+    message: Success
+  phone: 14000013725
+  huanjing: 线上
+-
+  caseid: 2
+  casename: 今日查看权益消耗
+  get_key:
+    - bzbParam
+  public_key:
+    targetType: 1
+    bz: 17
+    status: 1
+  private_key:
+    priceId: priceId
+    targetId: targetId
+  url: /wapi/zpblock/order/preorder
+  method: post
+  qiwang:
+    message: Success
+  phone: 14000013725
+  huanjing: 线上
+-
+  caseid: 3
+  casename: 今日查看权益消耗
+  get_key:
+  public_key:
+  private_key:
+    bzbParam: bzbParam
+  url: /wapi/zpp/user/bzbDiscountList
+  method: post
+  qiwang:
+    message: Success
+  phone: 14000013725
+  huanjing: 线上

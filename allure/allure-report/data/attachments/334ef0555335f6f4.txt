@@ -1,0 +1,10 @@
+DEBUG    urllib3.connectionpool:connectionpool.py:823 Starting new HTTPS connection (1): www.zhipin.com:443
+DEBUG    urllib3.connectionpool:connectionpool.py:393 https://www.zhipin.com:443 "GET /wapi/zppassport/get/zpToken HTTP/1.1" 200 86
+INFO     root:Logger.py:34 测试用例名称是：今日查看权益消耗
+INFO     root:Logger.py:34 测试接口是：https://www.zhipin.com/wapi/zpblock/order/preorder
+INFO     root:Logger.py:34 测试参数是：{'targetType': 1, 'bz': 17, 'status': 1, 'priceId': 'bd36107c97f561a91nN9', 'targetId': 'e5525e5aeb85e3e10Hx929W-FVU~'}
+INFO     root:Logger.py:34 wt2是：{'wt2': 'DeTVjVUn6vu-3T_Y303dagbBU4jpWIL_I0mgz_7J7sKXGWFSnAJZWfYwtI3kfRcMsoMqlawD8SX7Bia2Bef4PCQ~~'}
+DEBUG    urllib3.connectionpool:connectionpool.py:823 Starting new HTTPS connection (1): www.zhipin.com:443
+DEBUG    urllib3.connectionpool:connectionpool.py:393 https://www.zhipin.com:443 "POST /wapi/zpblock/order/preorder?targetType=1&bz=17&status=1&priceId=bd36107c97f561a91nN9&targetId=e5525e5aeb85e3e10Hx929W-FVU~ HTTP/1.1" 200 187
+INFO     root:Logger.py:34 测试返回结果++++++++{'code': 0, 'message': 'Success', 'zpData': {'bzbParam': 'd4e30828f5ba0778vD9oiZj-SQwFgc_GBeiVR-Kln_bYPxZgwrUB3_y1e9f3G21LaLSGkuJjI4DlqH9oSY8eyG9h44lz_YwjJw~~', 'discountParam': None, 'status': 1}}
+INFO     root:Logger.py:34 断言：预期结果：Success  实际结果：Success

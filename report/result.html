@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>接口测试</title>
+    <meta name="generator" content="HTMLTestReportCN 0.8.3"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    
+<style type="text/css" media="screen">
+body        { font-family: Microsoft YaHei,Tahoma,arial,helvetica,sans-serif;padding: 20px; font-size: 100%; }
+table       { font-size: 100%; }
+
+/* -- heading ---------------------------------------------------------------------- */
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- report ------------------------------------------------------------------------ */
+#total_row  { font-weight: bold; }
+.passCase   { color: #5cb85c; }
+.failCase   { color: #d9534f; font-weight: bold; }
+.errorCase  { color: #f0ad4e; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+</style>
+
+</head>
+<body >
+<div class='heading'>
+<h1 style="font-family: Microsoft YaHei">接口测试</h1>
+<p class='attribute'><strong>测试人员 : </strong> lph</p>
+<p class='attribute'><strong>开始时间 : </strong> 2022-06-13 19:28:37</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:09.850951</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 3，通过 3，通过率= 100.00%</p>
+
+<p class='description'></p>
+</div>
+
+
+
+<p id='show_detail_line'>
+<a class="btn btn-primary" href='javascript:showCase(4)'>概要{ 100.00% }</a>
+<a class="btn btn-success" href='javascript:showCase(0)'>通过{ 3 }</a>
+<a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 0 }</a>
+<a class="btn btn-warning" href='javascript:showCase(2)'>错误{ 0 }</a>
+<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 3 }</a>
+</p>
+<table id='result_table' class="table table-condensed table-bordered table-hover">
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row' class="text-center active" style="font-weight: bold;font-size: 14px;">
+    <td>用例集/测试用例</td>
+    <td>总计</td>
+    <td>通过</td>
+    <td>失败</td>
+    <td>错误</td>
+    <td>详细</td>
+</tr>
+
+<tr class='success'>
+    <td>case.test_case_yaml.Test_test</td>
+    <td class="text-center">3</td>
+    <td class="text-center">3</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c1',3)" class="detail" id='c1'>详细</a></td>
+</tr>
+
+<tr id='pt1_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_01_00001: test_01_00001</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起output信息 -Findyou
+    <button id='btn_pt1_1' type="button"  class="btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse">  -->
+
+    <!-- 默认展开output信息 -Findyou -->
+    <button id='btn_pt1_1' type="button"  class="btn-xs" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse in">
+    <pre>
+    
+pt1_1: [2022-06-13 19:28:37,383] - Logger.py] - INFO: 测试用例名称是：今日查看权益消耗
+[2022-06-13 19:28:37,384] - Logger.py] - INFO: 测试接口是：https://www.zhipin.com/wapi/zpblock/page/chatbag/price.json
+[2022-06-13 19:28:37,384] - Logger.py] - INFO: 测试参数是：None
+[2022-06-13 19:28:37,384] - Logger.py] - INFO: wt2是：{'wt2': 'DeTVjVUn6vu-3T_Y303dagbBU4jpWIL_I0mgz_7J7sKXGWFSnAJZWfYwtI3kfRcMsoMqlawD8SX7Bia2Bef4PCQ~~'}
+[2022-06-13 19:28:43,007] - Logger.py] - INFO: 测试返回结果++++++++{'code': 0, 'message': 'Success', 'zpData': {'blockPageData': {'actionType': 0, 'componentId': 1000003, 'pageHeader': {'title': '付费购买聊天加油包', 'subText': '购买聊天加油包，享受更多查看/沟通权益', 'helpText': None, 'helpUrl': None, 'componentId': 1001001}, 'dynamicBar': {'textList': None, 'componentId': 1002001}, 'cardList': [{'topTip4Pc': None, 'bottomTip4App': None, 'cardHeader': {'title': '聊天加油包', 'cardIntros': [{'text': '可用于全部在线职位', 'bzAction': None, 'scopeList': []}], 'componentId': 1004002}, 'goodsHeader': ['类型', '主动查看', '主动沟通'], 'goodsShowList': [{'goodsId': 'bd36107c97f561a91nN9', 'defaultSelected': False, 'price': '4', 'priceUnit': '直豆', 'tag': None, 'expireDesc': '当天可用', 'chatCount': '1', 'chatUnit': '人/天', 'viewCount': '2', 'viewUnit': '人/天', 'goodsButton': {'text': '立即购买', 'url': 'bosszp://bosszhipin.app/openwith?type=blockbzbpov2&amp;experience=0&amp;bizParams=90be2836407bceb8wnMIzt-_QgsaodP6E6nKUOagivShNxBi3qdTmrv5J_GhWgtQdL7Hw4Quco7UvA8qH8tZ7HxtsN0uv9BpSAS8mL0hNJ_leZMHvqz5Jz88Yl1BowRa9vygG3YaEKPhKlM6xosJDlC9mexO6FkdQ9OV1HE5BwFV9iKKYs351O4mVrpagKMR_kTjzh92liYJYFtC8-ttsgoXOOltSOwevs0mLL-K2Ff6tO2YZCAoaox-3STeNdY-5Q6ltBI-1dFrj0zPIfyo-sFUqifg31CBySUTdL3kl_jgfeFe6DV2_uPWqUqSmbGmLziJgavdKlA8D1SaDAhHEp-7MGWvgAsBrGFEu18WNrV3xC6qWfvYVqO86He3yZfmHyU8v73kCAKihKeiEMFC1IlqAKcyk37p&amp;ba=%7B%22p3%22%3A17%2C%22p4%22%3A0%2C%22p%22%3A1655119723108%2C%22action%22%3A%22biz-block-pay%22%7D', 'componentId': 1008001}, 'goodsTag': {'unit': '直豆', 'originPriceDesc': None, 'currPrice': '4', 'componentId': 1009001}, 'orderParams4Pc': {'targetType': 1, 'priceId': 'bd36107c97f561a91nN9', 'targetId': 'e5525e5aeb85e3e10Hx929W-FVU~', 'jid': '', 'bz': 17, 'sf': 8, 'tid': 1655119723108, 'bcPrice': None, 'exJid': None, 'eebp': None, 'exposureSource': None, 'biType': None, 'biPriceId': None, 'propParams': None, 'rot': None, 'bizParams': '90be2836407bceb8wnMIzt-_QgsaodP6E6nKUOagivShNxBi3qdTmrv5J_GhWgtQdL7Hw4Quco7UvA8qH8tZ7HxtsN0uv9BpSAS8mL0hNJ_leZMHvqz5Jz88Yl1BowRa9vygG3YaEKPhKlM6xosJDlC9mexO6FkdQ9OV1HE5BwFV9iKKYs351O4mVrpagKMR_kTjzh92liYJYFtC8-ttsgoXOOltSOwevs0mLL-K2Ff6tO2YZCAoaox-3STeNdY-5Q6ltBI-1dFrj0zPIfyo-sFUqifg31CBySUTdL3kl_jgfeFe6DV2_uPWqUqSmbGmLziJgavdKlA8D1SaDAhHEp-7MGWvgAsBrGFEu18WNrV3xC6qWfvYVqO86He3yZfmHyU8v73kCAKihKeiEMFC1IlqAKcyk37p'}, 'componentId': 1005005}, {'goodsId': '785e6a83a9a894181nNy', 'defaultSelected': False, 'price': '30', 'priceUnit': '直豆', 'tag': None, 'expireDesc': '当天可用', 'chatCount': '20', 'chatUnit': '人/天', 'viewCount': '40', 'viewUnit': '人/天', 'goodsButton': {'text': '立即购买', 'url': 'bosszp://bosszhipin.app/openwith?type=blockbzbpov2&amp;experience=0&amp;bizParams=6440e99ae1cee54fwnMIzt-_QgsaodP6E6nKUOagivShNxBi3qdTmrv5J_GhWgtQdL7Hw4Quco7UvA8qH8tZ7HxtsN0uv9BpSAS8mL0hNJ_leZMHvqz5Jz88Yl1BowRa9vygG3YaEKPhKlM6xosJDlC9mexO6FkdQ9OV1HE5BwFV9iKKYs351O4mVrpagKMR_kTjzh92liYJYFtC8-ttsgoXOOltSOwevs0mLL-K2Ff1tO2YZCAoaox-3STeNdY-5Q6ltBI-1dFrj0zPIfyo-sFUqifg31CBySUTdL3kl_jgfeFe6DV2_uPWqUqSmbGmLziJgavdKlA8D1SaDAhHEp-7MGWvgAsBrGFEu18WNrV3xC6qWfvYVqO86He3yZfmHyU8v73kCAKihKeiEMFC1IlqAKcyk37p&amp;ba=%7B%22p3%22%3A17%2C%22p4%22%3A0%2C%22p%22%3A1655119723108%2C%22action%22%3A%22biz-block-pay%22%7D', 'componentId': 1008001}, 'goodsTag': {'unit': '直豆', 'originPriceDesc': None, 'currPrice': '30', 'componentId': 1009001}, 'orderParams4Pc': {'targetType': 1, 'priceId': '785e6a83a9a894181nNy', 'targetId': 'e5525e5aeb85e3e10Hx929W-FVU~', 'jid': '', 'bz': 17, 'sf': 8, 'tid': 1655119723108, 'bcPrice': None, 'exJid': None, 'eebp': None, 'exposureSource': None, 'biType': None, 'biPriceId': None, 'propParams': None, 'rot': None, 'bizParams': '6440e99ae1cee54fwnMIzt-_QgsaodP6E6nKUOagivShNxBi3qdTmrv5J_GhWgtQdL7Hw4Quco7UvA8qH8tZ7HxtsN0uv9BpSAS8mL0hNJ_leZMHvqz5Jz88Yl1BowRa9vygG3YaEKPhKlM6xosJDlC9mexO6FkdQ9OV1HE5BwFV9iKKYs351O4mVrpagKMR_kTjzh92liYJYFtC8-ttsgoXOOltSOwevs0mLL-K2Ff1tO2YZCAoaox-3STeNdY-5Q6ltBI-1dFrj0zPIfyo-sFUqifg31CBySUTdL3kl_jgfeFe6DV2_uPWqUqSmbGmLziJgavdKlA8D1SaDAhHEp-7MGWvgAsBrGFEu18WNrV3xC6qWfvYVqO86He3yZfmHyU8v73kCAKihKeiEMFC1IlqAKcyk37p'}, 'componentId': 1005005}, {'goodsId': '19c7750c57431dc71XB-0w~~', 'defaultSelected': True, 'price': '198', 'priceUnit': '直豆', 'tag': '推荐', 'expireDesc': '有效期30天', 'chatCount': '30', 'chatUnit': '人/天', 'viewCount': '60', 'viewUnit': '人/天', 'goodsButton': {'text': '立即购买', 'url': 'bosszp://bosszhipin.app/openwith?type=blockbzbpov2&amp;experience=0&amp;bizParams=d670bf6cc1ef5f3bwnMIzt-_QgsaodP6E6nKUOagivShNxBi3qdTmrv5J_GhWgtQdL7Hw4Quco7UvA8qH8tZ7HxtsN0uv9BpSAS8mL0hNJ_leZMHvqz5Jz88Yl1BowRa9vygG3YaEKPhKlM6xosJDlC9mexO6FkdQ9OV1HE5BwFV9iKKYs351O4mVrpagKMR_kTjzh92liYJYFtC8-ttsgoXOOltSOwevs0mLL-K21T5qfrpAjcoP4R-1jPkGP4b_wn0oxIpw6MPnzu8J_y67bAmrCj9yCHwzyUfaa2V9u-RG_ZeqSd799L7oF_SjrGxOUr5lbysTEc8TkHZGwhQBO3CLXLe5hwB6nRXrl0HC5g20y69T4muWay74Hyxy4XxbkMrv_vxGxeglYePGdQCw4l9FtVCh2yaOA~~&amp;ba=%7B%22p3%22%3A17%2C%22p4%22%3A0%2C%22p%22%3A1655119723108%2C%22action%22%3A%22biz-block-pay%22%7D', 'componentId': 1008001}, 'goodsTag': {'unit': '直豆', 'originPriceDesc': None, 'currPrice': '198', 'componentId': 1009001}, 'orderParams4Pc': {'targetType': 1, 'priceId': '19c7750c57431dc71XB-0w~~', 'targetId': 'e5525e5aeb85e3e10Hx929W-FVU~', 'jid': '', 'bz': 17, 'sf': 8, 'tid': 1655119723108, 'bcPrice': None, 'exJid': None, 'eebp': None, 'exposureSource': None, 'biType': None, 'biPriceId': None, 'propParams': None, 'rot': None, 'bizParams': 'd670bf6cc1ef5f3bwnMIzt-_QgsaodP6E6nKUOagivShNxBi3qdTmrv5J_GhWgtQdL7Hw4Quco7UvA8qH8tZ7HxtsN0uv9BpSAS8mL0hNJ_leZMHvqz5Jz88Yl1BowRa9vygG3YaEKPhKlM6xosJDlC9mexO6FkdQ9OV1HE5BwFV9iKKYs351O4mVrpagKMR_kTjzh92liYJYFtC8-ttsgoXOOltSOwevs0mLL-K21T5qfrpAjcoP4R-1jPkGP4b_wn0oxIpw6MPnzu8J_y67bAmrCj9yCHwzyUfaa2V9u-RG_ZeqSd799L7oF_SjrGxOUr5lbysTEc8TkHZGwhQBO3CLXLe5hwB6nRXrl0HC5g20y69T4muWay74Hyxy4XxbkMrv_vxGxeglYePGdQCw4l9FtVCh2yaOA~~'}, 'componentId': 1005005}], 'discount': None, 'introduction': {'textList': [{'text': '加油包商品购买后立即生效，商品中包含的主动沟通次数及赠送的主动查看次数均可对全部在线职位使用，仅用于非匿名牛人', 'bzAction': None, 'scopeList': None}, {'text': '1直豆等于1元人民币，直豆充值可开具发票', 'bzAction': None, 'scopeList': None}, {'text': '该产品属于数字化商品，不支持七天无理由退货，使用过程中的注意事项', 'bzAction': None, 'scopeList': [{'start': 28, 'end': 32, 'style': 0, 'bzAction': 'https://m.zhipin.com/mpa/html/mix/attention?type=openUrl&amp;blockType=6'}]}, {'text': '道具组合使用更高效，套餐购买价格更优，详询：400-065-5799或请销售顾问联系我；也可直接咨询在线客服', 'bzAction': None, 'scopeList': [{'start': 22, 'end': 34, 'style': 0, 'bzAction': 'bosszp://bosszhipin.app/openwith?type=telecall&amp;phone=400-0655-799&amp;ba=%7B%22p%22%3A1655119723114%2C%22action%22%3A%22biz-block-contact%22%7D'}, {'start': 35, 'end': 43, 'style': 0, 'bzAction': 'bosszp://bosszhipin.app/openwith?type=contactme&amp;businessType=0&amp;itemType=1001&amp;bgItemType=12&amp;ba=%7B%22p3%22%3A12%2C%22action%22%3A%22boss-interruption-require-click%22%7D'}, {'start': 50, 'end': 54, 'style': 0, 'bzAction': 'bosszp://bosszhipin.app/openwith?type=customerServiceGuide&amp;identityType=0&amp;source=9'}]}], 'componentId': 1007001}, 'componentId': 1003006}], 'bgAction': {'data': '%7B%22p2%22%3A0%2C%22p3%22%3A854%2C%22p4%22%3A17%2C%22bg%22%3A1%2C%22p5%22%3A8%2C%22uid%22%3A78708357%2C%22p14%22%3A0%2C%22p13%22%3A0%2C%22p16%22%3A%225%22%2C%22action%22%3A%22biz-block%22%2C%22p%22%3A1655119723108%7D', 'timeStamp': 1655119723108, 'blockId': 0, 'closeBa': None, 'componentId': 1010001}, 'toastLayer': None}}}
+[2022-06-13 19:28:43,263] - Logger.py] - INFO: 断言：预期结果：Success  实际结果：Success
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_01_00002: test_01_00002</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起output信息 -Findyou
+    <button id='btn_pt1_2' type="button"  class="btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
+    <div id='div_pt1_2' class="collapse">  -->
+
+    <!-- 默认展开output信息 -Findyou -->
+    <button id='btn_pt1_2' type="button"  class="btn-xs" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
+    <div id='div_pt1_2' class="collapse in">
+    <pre>
+    
+pt1_2: [2022-06-13 19:28:44,849] - Logger.py] - INFO: 测试用例名称是：今日查看权益消耗
+[2022-06-13 19:28:44,851] - Logger.py] - INFO: 测试接口是：https://www.zhipin.com/wapi/zpblock/order/preorder
+[2022-06-13 19:28:44,853] - Logger.py] - INFO: 测试参数是：{'targetType': 1, 'bz': 17, 'status': 1, 'priceId': 'bd36107c97f561a91nN9', 'targetId': 'e5525e5aeb85e3e10Hx929W-FVU~'}
+[2022-06-13 19:28:44,855] - Logger.py] - INFO: wt2是：{'wt2': 'DeTVjVUn6vu-3T_Y303dagbBU4jpWIL_I0mgz_7J7sKXGWFSnAJZWfYwtI3kfRcMsoMqlawD8SX7Bia2Bef4PCQ~~'}
+[2022-06-13 19:28:46,219] - Logger.py] - INFO: 测试返回结果++++++++{'code': 0, 'message': 'Success', 'zpData': {'bzbParam': 'eaef66a55b14467dvD9oiZj-SQwFgc_GBeiVR-Kln_bXPxlmwrUB3_y1e9f3G21LaLSGkuJjI4DlqH9oSY8eyG9h44lz_YwjJw~~', 'discountParam': None, 'status': 1}}
+[2022-06-13 19:28:46,221] - Logger.py] - INFO: 断言：预期结果：Success  实际结果：Success
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_01_00003: test_01_00003</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起output信息 -Findyou
+    <button id='btn_pt1_3' type="button"  class="btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
+    <div id='div_pt1_3' class="collapse">  -->
+
+    <!-- 默认展开output信息 -Findyou -->
+    <button id='btn_pt1_3' type="button"  class="btn-xs" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
+    <div id='div_pt1_3' class="collapse in">
+    <pre>
+    
+pt1_3: [2022-06-13 19:28:46,352] - Logger.py] - INFO: 测试用例名称是：今日查看权益消耗
+[2022-06-13 19:28:46,354] - Logger.py] - INFO: 测试接口是：https://www.zhipin.com/wapi/zpp/user/bzbDiscountList
+[2022-06-13 19:28:46,356] - Logger.py] - INFO: 测试参数是：{'bzbParam': 'eaef66a55b14467dvD9oiZj-SQwFgc_GBeiVR-Kln_bXPxlmwrUB3_y1e9f3G21LaLSGkuJjI4DlqH9oSY8eyG9h44lz_YwjJw~~'}
+[2022-06-13 19:28:46,358] - Logger.py] - INFO: wt2是：{'wt2': 'DeTVjVUn6vu-3T_Y303dagbBU4jpWIL_I0mgz_7J7sKXGWFSnAJZWfYwtI3kfRcMsoMqlawD8SX7Bia2Bef4PCQ~~'}
+[2022-06-13 19:28:47,134] - Logger.py] - INFO: 测试返回结果++++++++{'code': 0, 'message': 'Success', 'zpData': {'hasMore': False, 'totalCount': 0, 'discountList': []}}
+[2022-06-13 19:28:47,136] - Logger.py] - INFO: 断言：预期结果：Success  实际结果：Success
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='total_row' class="text-center info">
+    <td>总计</td>
+    <td>3</td>
+    <td>3</td>
+    <td>0</td>
+    <td>0</td>
+    <td>通过率：100.00%</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+    <div style=" position:fixed;right:50px; bottom:30px; width:20px; height:20px;cursor:pointer">
+    <a href="#"><span class="glyphicon glyphicon-eject" style = "font-size:30px;" aria-hidden="true">
+    </span></a></div>
+    
+<script language="javascript" type="text/javascript">
+output_list = Array();
+// 修改按钮颜色显示错误问题 --Findyou v0.8.2.3
+
+$("button[id^='btn_pt']").addClass("btn btn-success");
+$("button[id^='btn_ft']").addClass("btn btn-danger");
+$("button[id^='btn_et']").addClass("btn btn-warning");
+
+/*level
+增加分类并调整，增加error按钮事件 --Findyou v0.8.2.3
+0:Pass    //pt none, ft hiddenRow, et hiddenRow
+1:Failed  //pt hiddenRow, ft none, et hiddenRow
+2:Error    //pt hiddenRow, ft hiddenRow, et none
+3:All     //pt none, ft none, et none
+4:Summary //all hiddenRow
+*/
+
+//add Error button event --Findyou v0.8.2.3
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level == 0 || level == 2 || level == 4 ) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level == 1 || level == 2 || level == 4) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'et') {
+            if (level == 0 || level == 1 || level == 4) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+    }
+
+    //加入【详细】切换文字变化 --Findyou
+    detail_class=document.getElementsByClassName('detail');
+	//console.log(detail_class.length)
+	if (level == 3) {
+		for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="收起"
+		}
+	}
+	else{
+			for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="详细"
+		}
+	}
+}
+
+//add Error button event --Findyou v0.8.2.3
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '_' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        if (!tr) {
+            tid = 'e' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        //修改点击无法收起的BUG，加入【详细】切换文字变化 --Findyou
+        if (toHide) {
+            document.getElementById(tid).className = 'hiddenRow';
+            document.getElementById(cid).innerText = "详细"
+        }
+        else {
+            document.getElementById(tid).className = '';
+            document.getElementById(cid).innerText = "收起"
+        }
+    }
+}
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+</script>
+</body>
+</html>
