@@ -1,6 +1,7 @@
 import ddt,re
 from utils.getwt import get_token
 import requests
+import threading
 from utils.Logger import Log
 
 log=Log()
@@ -18,6 +19,7 @@ class Test_test():
 
     @ddt.file_data('/Users/lph/Documents/API_test/data/case1.yaml')
     def test_02(self, **kwargs):
+        threading.currentThread().name
         if str(kwargs['huanjing']) == 'qa':
             DOMAIN = 'XXXXXXXX'
         elif str(kwargs['huanjing']) == '预生产':
