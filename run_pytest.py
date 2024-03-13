@@ -52,7 +52,7 @@ def delete(filepaths):
 
 if __name__ == '__main__':
     delete('/allure/allure-results')
-    pytest.main(['-s','-v','./case/test_case_yaml_pytest.py','--alluredir','./allure/allure-results'])
-    os.system('allure generate ./allure/allure-results -o ./allure/allure-report/ ')
+    pytest.main(['-s','-v','./case/test_case_yaml_pytest.py','-n=4','--clean-alluredir', '--alluredir=./allure/allure-results'])
+    os.system('allure generate ./allure/allure-results -o ./allure/allure-report/ --clean')
     zip_file('./allure')
     send_mail('XXXXXXX','./allure.zip')
