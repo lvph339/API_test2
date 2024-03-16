@@ -29,7 +29,7 @@ class Test_test():
         #获取登录token
         zhipin_cookie, zp_token_date = get_token()
         #拼接入参
-        testdata = data_splicing(kwargs['public_key'], kwargs['private_key'])
+        testdata = data_splicing(kwargs['public_key'], kwargs['private_key'], l_params={})
         log.info('测试用例名称是：' + kwargs['casename'])
         log.info('测试接口是：' + DOMAIN + kwargs['url'])
         log.info('测试参数是：' + str(testdata))
