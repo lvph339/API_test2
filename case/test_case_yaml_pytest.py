@@ -1,10 +1,14 @@
-import ddt,re
+import ddt
 from utils.getwt import get_token
 import requests
 import threading
 from utils.Logger import Log
+from utils.envUtils import envUtils
+from utils.OperationalData import data_splicing
+from utils.OperationalData import get_exp_datas
+from utils.OperationalData import dependent_data
 
-log=Log()
+log = Log()
 l_params = {}
 @ddt.ddt
 class Test_test():
@@ -20,73 +24,24 @@ class Test_test():
     @ddt.file_data('/Users/lph/Documents/API_test/data/case1.yaml')
     def test_02(self, **kwargs):
         threading.currentThread().name
-        if str(kwargs['huanjing']) == 'qa':
-            DOMAIN = 'XXXXXXXX'
-        elif str(kwargs['huanjing']) == '预生产':
-            DOMAIN = 'XXXXXXXX'
-        else:
-            DOMAIN = 'XXXXXXXx'
+        #判断运行环境
+        DOMAIN = envUtils(kwargs['huanjing'])
+        #获取登录token
         zhipin_cookie, zp_token_date = get_token()
-        testdata = kwargs['public_key']
-        if kwargs['private_key'] is not None:
-            quanju = kwargs['private_key']
-            for key, value in quanju.items():
-                if key is not None and value is not None:
-                    quanju.update({key: l_params[value]})
-            if testdata is not None:
-                testdata.update(quanju)
-            else:
-                testdata = quanju
+        #拼接入参
+        testdata = data_splicing(kwargs['public_key'], kwargs['private_key'])
         log.info('测试用例名称是：' + kwargs['casename'])
         log.info('测试接口是：' + DOMAIN + kwargs['url'])
         log.info('测试参数是：' + str(testdata))
         log.info('wt2是：' + str(zhipin_cookie))
+        #发出请求
         response_date = requests.request(url=DOMAIN + kwargs['url'], cookies=zhipin_cookie,headers=zp_token_date, params=testdata, method=kwargs['method'])
         response = response_date.json()
         log.info('测试返回结果++++++++' + str(response))
-        ##取期望
-        if kwargs['qiwang'] is None:
-            log.info('期望填写错误')
-        else:
-            report = kwargs['qiwang']
-            for key, value in report.items():
-                report_date = ''
-                try:  ##字符串匹配
-                    report_dates = re.findall('\"' + key + '\":\"(.*?)\"', response_date.text)
-                    report_date = report_dates[0]
-                except BaseException as e:
-                    print(e)
-                if len(report_dates) == 0:
-                    try:  ##数字/布尔值匹配
-                        report_dates = re.findall('\"' + key + '\":(.*?),', response_date.text)
-                        report_date = report_dates[0]
-                    except BaseException as e:
-                        print(e)
-                if len(report_dates) == 0:
-                    try:  ##末尾匹配
-                        report_dates = re.findall('\"' + key + '\":(.*?)}', response_date.text)
-                        report_date = report_dates[0]
-                    except BaseException as e:
-                        print(e)
-                if value is None:
-                    value = 'null'
-                log.info('断言：预期结果：' + str(value) + '  实际结果：' + report_date)
-                assert report_date == str(value)
-        ##取返回值
-        if kwargs['get_key'] is not None:
-            for key in kwargs['get_key']:
-                try:
-                    param = re.findall('\"' + key + '\":\"(.*?)\"', response_date.text)[0]
-                    l_params.update({key:param})
-                except BaseException as e:
-                    print(e)
-                if param != '':
-                    try:  ##数字/布尔值匹配
-                        param = re.findall('\"' + key + '\":(.*?),', response_date.text)[0]
-                    except BaseException as e:
-                        print(e)
-                if param != '':
-                    try:  ##末尾匹配
-                        param = re.findall('\"' + key + '\":(.*?)}', response_date.text)[0]
-                    except BaseException as e:
-                        print(e)
+        ##获取期望
+        report_date_list, value_list = get_exp_datas(kwargs['qiwang'],response_date)
+        for a in range(len(report_date_list)):
+            log.info('断言：预期结果：' + str(value_list[a]) + '  实际结果：' + report_date_list[a])
+            assert report_date_list[a] == str(value_list[a])
+        l_params = dependent_data(kwargs['get_key'], response_date, l_params={})
+        log.info('l_params参数是:'+str(l_params))
