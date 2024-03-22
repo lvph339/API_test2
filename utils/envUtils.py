@@ -1,4 +1,4 @@
-def envUtils(self,env):
+def envUtils(env):
     if str(env) == 'qa':
         DOMAIN = 'XXXXXXXX'
     elif str(env) == '预生产':

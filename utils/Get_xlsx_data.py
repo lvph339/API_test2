@@ -6,7 +6,7 @@ path = os.path.dirname(os.path.dirname(__file__))
 
 def get_xlsx():
     try:
-        file = xlrd.open_workbook(path + '/data/case1.xlsx')
+        file = xlrd.open_workbook(path + '/casedata/case1.xlsx')
         rslut = file.sheets()[0]
         nrows = rslut.nrows
         listid = []
